@@ -1,16 +1,21 @@
 Algoritmo bar
-	definir edad Como Entero
-	definir efectivo Como Caracter
+	definir edad , i  Como Entero
+	definir acum , cont Como Entero
+	acum = 0
+	cont = 0
 	
-	Mostrar "ingresa la edad"
-	Leer  edad
-	Mostrar  "ingresa (si)	hay dinero o ingrese (no) si no hay"
-	Leer efectivo
 	
-	si edad >= 18 y efectivo = "si" Entonces
-		Mostrar "pueden entrar al bar"
-	SiNo
-		Mostrar "no puede ingresar al bar"
-	FinSi
-	
+	para i = 1 hasta 2 con paso 1 Hacer
+		mostrar " ingrese la edad de la persona # " , i
+		leer edad
+		mostrar "la edad de la persona  " , i , "  es  " , edad
+		cont = cont + 1
+		acum = acum + edad // se acumula el numero de las edades 
+		
+		
+	FinPara
+	mostrar i
+	mostrar " la cantidad de personas es : " cont
+	mostrar " la suma de las edades es : " acum
+	Mostrar  " el promedio es : " , acum/cont
 FinAlgoritmo
